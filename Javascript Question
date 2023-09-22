@@ -1,0 +1,15 @@
+this is the solution of the javascript question : 
+
+const missedNum = (arr) => {
+  let result = 0;
+  let sortedArr = arr.sort((a, b) => a - b);
+  for (let i = 0 - 1; i < sortedArr.length; i++) {
+    if (sortedArr[i] !== i) {
+      result = i;
+    } else if (sortedArr[i] === i) {
+      result = i + 1;
+    }
+  }
+
+  return result;
+};
